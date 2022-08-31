@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}</f:variable>
+<f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
+<f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:'
+    navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}
+</f:variable>
+
+<header class="site-header sticky-top py-1" id="page-header" class="{headerClass}">
+    <f:if condition="{mainnavigation}">
+        <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}"/>
+        <f:render section="MainNavigation" arguments="{menu: mainnavigation, theme: theme}"/>
+        <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}"/>
+    </f:if>
+</header>
+
+<f:section name="MainNavigation">
+    <f:if condition="{menu}">
+            <nav class="container d-flex flex-column flex-md-row justify-content-between">
+
+                <f:link.page pageUid="{rootPage}" class="py-2" title="{settings.logo.linktitle}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto"
+                         role="img" viewBox="0 0 24 24"><title>Product</title>
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
+                    </svg>
+                </f:link.page>
+
+                <f:for each="{menu}" as="item">
+                    <a href="{child.link}" class="py-2 d-none d-md-inline-block{f:if(condition: child.active, then:' active')}" {f:if(condition: '{child.target}', then: ' target="{child.target}"')}{f:if(condition:'{child.target} == "_blank"', then: ' rel="noopener noreferrer"')} title="{child.title}">{item.title}</a>
+                </f:for>
+            </nav>
+    </f:if>
+</f:section>
+</html>

@@ -1,7 +1,7 @@
 Sitepackage for FK
 ==============================================================
 
-## Quickstart 🚀
+## 🚀 Quickstart
 
 - `cd public/typo3conf/ext/fk_sitepackage/Build`
 - `npm install`
