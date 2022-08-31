@@ -12,19 +12,36 @@ page {
         theme = EXT:fk_sitepackage/Resources/Public/Scss/Theme/theme.scss
     }
 
-    includeJSLibs {
-
-    }
-
-    includeJS {
-
-    }
-
-    includeJSFooterlibs {
-
-    }
-
     includeJSFooter {
         fk_sitepackage_scripts = EXT:fk_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
+    }
+
+    10.dataProcessing {
+        823645 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        823645 {
+            levels = 1
+            includeSpacer = 1
+            as = footerfeatures
+            special = directory
+            special.value = 6
+        }
+
+        847484 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        847484 {
+            levels = 1
+            includeSpacer = 1
+            as = footerresources
+            special = directory
+            special.value = 7
+        }
+
+        857484 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        857484 {
+            levels = 1
+            includeSpacer = 1
+            as = footerabout
+            special = directory
+            special.value = 11
+        }
     }
 }
