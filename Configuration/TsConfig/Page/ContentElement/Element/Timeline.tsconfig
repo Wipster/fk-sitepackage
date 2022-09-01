@@ -1,0 +1,10 @@
+####################################
+#### NEW CONTENT ELEMENT WIZARD ####
+####################################
+mod.wizards.newContentElement.wizardItems.interactive {
+    elements {
+        timeline {
+            title = LLL:EXT:fk_sitepackage/Resources/Private/Language/locallang_be.xlf:timeline_item
+        }
+    }
+}

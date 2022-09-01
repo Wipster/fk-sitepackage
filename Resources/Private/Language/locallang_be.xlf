@@ -12,6 +12,9 @@
             <trans-unit id="backend_layout.column.normal">
                 <source>Normal</source>
             </trans-unit>
+            <trans-unit id="timeline_item">
+                <source>Fishing-King Timeline</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
