@@ -12,8 +12,11 @@
             <trans-unit id="backend_layout.column.normal">
                 <source>Normal</source>
             </trans-unit>
-            <trans-unit id="timeline_item">
+            <trans-unit id="timeline_title">
                 <source>Fishing-King Timeline</source>
+            </trans-unit>
+            <trans-unit id="timeline_color">
+                <source>Hintergrundfarbe (Hex-Format: #334421)</source>
             </trans-unit>
         </body>
     </file>
